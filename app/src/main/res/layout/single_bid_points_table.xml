@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="@color/primary"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:padding="14dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/open_digit"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/sing_bid_opendigit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/open"
+                        android:text="@string/_20"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pointssing"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/sing_bid_points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/points"
+                        android:paddingStart="5dp"
+                        android:text="@string/_20"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="12sp"
+                        tools:ignore="RtlSymmetry" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/sing_bid_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_baseline_close_24"
+                        android:backgroundTint="@color/black"
+                        android:gravity="center" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

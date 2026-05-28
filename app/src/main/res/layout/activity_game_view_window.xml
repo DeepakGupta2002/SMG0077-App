@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fillViewport="true"
+    tools:context=".TaskListWindow">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/layer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/myappbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black"
+                        android:minHeight="?attr/actionBarSize"
+                        android:theme="?attr/actionBarTheme" />
+
+                    <ImageView
+                        android:id="@+id/userbackbut"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_baseline_arrow_back" />
+
+                    <TextView
+                        android:id="@+id/welcometxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/add_points"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layer1"
+            android:layout_marginBottom="80dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:id="@+id/singledigitgame"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:src="@drawable/ic_game_back"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <ImageView
+                            android:id="@+id/image01"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ace_ic_single_dice" />
+
+                        <TextView
+                            android:layout_below="@+id/image01"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center_horizontal"
+                            android:background="@drawable/ic_name_back"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:fontFamily="@font/kohsantepheap_bold"
+                            android:text="Single Digit"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:layout_weight="1"
+                            android:id="@+id/jodidigitgame"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:src="@drawable/ic_game_back"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:id="@+id/image2"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ace_ic_joditwo" />
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:layout_below="@+id/image2"
+                                android:background="@drawable/ic_name_back"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:fontFamily="@font/kohsantepheap_bold"
+                                android:text="Jodi Digit"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+
+
+                        </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/singlepanagame"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:src="@drawable/ic_game_back"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <ImageView
+                            android:id="@+id/image03"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@drawable/ace_one_image" />
+
+                        <TextView
+                            android:layout_below="@+id/image03"
+                            android:gravity="center_horizontal"
+                            android:background="@drawable/ic_name_back"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:fontFamily="@font/kohsantepheap_bold"
+                            android:text="Single Panna"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+
+                    </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/doublepanagame"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="10dp"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:src="@drawable/ic_game_back"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/image04"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:src="@drawable/ace_two" />
+
+                            <TextView
+
+                                android:background="@drawable/ic_name_back"
+                                android:gravity="center_horizontal"
+                                android:layout_below="@+id/image04"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:fontFamily="@font/kohsantepheap_bold"
+                                android:text="Double Panna"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+
+
+
+                        </RelativeLayout>
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/triplepanagame"
+                        android:layout_width="@dimen/_130sdp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:src="@drawable/ic_game_back"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <ImageView
+                            android:id="@+id/image05"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@drawable/ace_three" />
+
+                        <TextView
+                            android:gravity="center_horizontal"
+                            android:background="@drawable/ic_name_back"
+                            android:layout_below="@+id/image05"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/kohsantepheap_bold"
+                            android:text="Triple Panna"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+
+
+                    </RelativeLayout>
+                    
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/halfsangamgame"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:src="@drawable/ic_game_back"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <ImageView
+                            android:id="@+id/image06"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ace_ic_haif_sangam" />
+
+                        <TextView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center_horizontal"
+                            android:background="@drawable/ic_name_back"
+                            android:layout_below="@+id/image06"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:fontFamily="@font/kohsantepheap_bold"
+                            android:text="Haif Sangam"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/fullsangamgame"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:src="@drawable/ic_game_back"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <ImageView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:id="@+id/image07"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@drawable/ace_ic_full_sangam" />
+
+                        <TextView
+                            android:gravity="center_horizontal"
+                            android:background="@drawable/ic_name_back"
+                            android:layout_below="@+id/image07"
+                            android:layout_marginTop="@dimen/_13sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:fontFamily="@font/kohsantepheap_bold"
+                            android:text="Full Sangam"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/progressbar2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <include layout="@layout/custom_progress_bar" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/btnmenu"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true">
+        <RelativeLayout
+            android:background="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="1.2dp"
+            android:layout_marginTop="15dp"/>
+        <LinearLayout
+            android:background="@color/black"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/bidHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/menu_mbd_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/vn"
+                    app:tint="@color/white"/>
+                <TextView
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:id="@+id/menu_mbd_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bid History"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/withdraw_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/menu_psb_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/bs"
+                    app:tint="@color/white"/>
+                <TextView
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:id="@+id/menu_psb_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Withdraw"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_gravity="center"
+                    android:id="@+id/menu_home"
+                    android:background="@drawable/circle_box"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:elevation="10dp"
+                    android:backgroundTint="#ff5722">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/fd"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/home_add_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/menu_fnd_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/wl022"
+                    app:tint="@color/white"/>
+                <TextView
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:id="@+id/menu_fnd_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Fund"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/home_whatappbut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/menu_support_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/supportimg"
+                    app:tint="@color/white"/>
+                <TextView
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:id="@+id/menu_support_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Game Rates"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

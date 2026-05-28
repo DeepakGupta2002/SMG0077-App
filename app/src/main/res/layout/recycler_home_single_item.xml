@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:strokeWidth="@dimen/_1sdp"
+    app:cardBackgroundColor="@color/white"
+    app:strokeColor="@color/primarydark"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+
+    <RelativeLayout
+        android:background="@drawable/gradient_color_design"
+        android:id="@+id/homerecycle_mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.romainpiel.shimmer.ShimmerTextView
+            android:id="@+id/recyc_gamenametxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingTop="3dp"
+            android:text="@string/company_name"
+            android:textColor="@color/back"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:reflectionColor="#2196F3" />
+
+
+        <com.romainpiel.shimmer.ShimmerTextView
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:id="@+id/recyc_scorecardtxtn"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/recyc_gamenametxt"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:shadowColor="@color/black"
+            android:text="@string/xxx_xx_xxx"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"
+            app:reflectionColor="#2196F3"/>
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/layouttwo"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:background="@drawable/empty_square"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/gamePlayTV"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_7sdp"
+                android:background="@drawable/ic_close"
+                android:paddingStart="@dimen/_3sdp"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_below="@+id/layouttwo"
+            android:background="#000000"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/ghost_white"
+                android:gravity="center"
+                android:id="@+id/recyc_opentimetxt"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="10:00 AM  "/>
+            <TextView
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/ghost_white"
+                android:gravity="center"
+                android:id="@+id/recyc_close_time_txt"
+                android:paddingLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="10:00 AM"
+                android:layout_alignParentRight="true"/>
+            <com.romainpiel.shimmer.ShimmerTextView
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/theme"
+                android:gravity="center"
+                android:id="@+id/market_status_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DECLARED HOLIDAY"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutone"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_9sdp">
+
+            <TextView
+                android:id="@+id/gameChartTV"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:background="@drawable/ic_chart_two" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

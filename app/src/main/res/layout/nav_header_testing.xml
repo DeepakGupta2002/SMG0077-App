@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/layer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:paddingTop="45dp"
+        android:paddingBottom="25dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/user_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/secondary"
+            app:cardCornerRadius="70dp">
+
+            <TextView
+                android:id="@+id/userFirstLetter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_semibold"
+                android:gravity="center"
+                android:text="@string/d"
+                android:textColor="@color/back"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:contentDescription="@string/user_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_man"
+                android:visibility="gone" />
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/nav_usernametxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kohsantepheap_bold"
+                android:paddingLeft="8dp"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nav_phonenumbertxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nav_usernametxt"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/inter_semibold"
+                android:paddingLeft="8dp"
+                android:text="@string/user_name"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layer1"
+        android:elevation="5dp"
+        android:gravity="center"
+        tools:ignore="NotSibling">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/menuItemHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/home"
+                    android:layout_width="28dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/home"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="33dp"
+                    android:layout_toEndOf="@id/personImage"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Home"
+                    android:textColor="@color/back"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/menuItemUserProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/personImage"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_profile" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/personImage"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/user_profile"
+                    android:textColor="@color/back"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/NotificationImg"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/notification" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/NotificationImg"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/notification"
+                    android:textColor="@color/back"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:theme="@style/SwitchStyle"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/notificationSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearWalletControl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/menuItemUserWallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="18dp"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/image_wallet" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="@string/wallet"
+                        android:textColor="@color/back"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/menuItemAddpoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="18dp"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/image_add_point" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="@string/add_points"
+                        android:textColor="@color/back"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuItemWithdrawpoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="18dp"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/imge_cash_withdraw" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="@string/withdraw_points"
+                        android:textColor="@color/back"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuItemTransferpoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="18dp"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/image_transfer" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="@string/transfer_points"
+                        android:textColor="@color/back"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuItemBidHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="18dp"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/image_transaction_history" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="@string/bid_history"
+                        android:textColor="@color/back"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuItemUserWinHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="18dp"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/image_win_history" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="@string/win_history"
+                        android:textColor="@color/back"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/menuJointelegram"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="18dp"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/telegram" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="Join Telegram"
+                        android:textColor="@color/back"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:paddingLeft="8dp"
+                android:text="UPI" />
+
+            <LinearLayout
+                android:id="@+id/upiLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/menuItempaytm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="6dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/paytmmm"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/paytm" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/paytmmm"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="@string/paytm"
+                        android:textColor="@color/back"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/menuItemphonepe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="6dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/phonepe"
+
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/phonepe" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/phonepe"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="@string/phonepe"
+                        android:textColor="@color/back"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/menuItemgpay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="6dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/gpay"
+                        android:layout_width="24dp"
+
+                        android:layout_height="24dp"
+                        android:src="@drawable/googlepay" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/gpay"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="@string/google_pay"
+                        android:textColor="@color/back"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter_semibold"
+                android:paddingLeft="8dp"
+                android:text="More" />
+
+            <RelativeLayout
+                android:id="@+id/menuItemGameRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:padding="6dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/gameRate"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_purchase" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/gameRate"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/game_rate"
+                    android:textColor="@color/back"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/menuItemGuessingFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:padding="6dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/guessingFromIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_baseline_list_alt_24"
+                    android:tint="@color/back" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/guessingFromIcon"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Guessing From"
+                    android:textColor="@color/back"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/menuItemShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:padding="6dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/Share"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_share" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/Share"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/share"
+                    android:textColor="@color/back"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/menuItemContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+
+                android:padding="6dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/contactUs"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_contact_us" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/contactUs"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/contact_us"
+                    android:textColor="@color/back"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/menuItemRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:padding="6dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/rating"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_review" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/rating"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/rating"
+                    android:textColor="@color/back"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/menuItemChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:padding="6dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/changePassword"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_change_password" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/changePassword"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/change_password"
+                    android:textColor="@color/back"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/menuItemGameChart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+
+
+                android:padding="6dp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/gameChart"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_wallet"
+                    android:tint="@color/back" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/gameChart"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Game Chart"
+                    android:textColor="@color/back"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/menuItemKseKhleGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:padding="6dp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/gamePlay"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_how_to_play" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/gamePlay"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/how_to_play"
+                    android:textColor="@color/back"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/menuItemLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+
+                android:padding="6dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/logoutApp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_wallet" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/logoutApp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/logout"
+                    android:textColor="@color/back"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="2dp"
+                android:background="@color/primary"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
