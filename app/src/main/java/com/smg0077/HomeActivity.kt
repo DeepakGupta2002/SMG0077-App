@@ -313,7 +313,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
         shareNavigationItem.setOnClickListener {
-            AppDelegate.openWebPage(this, "https://matka.justneed.in/")
+            AppDelegate.openWebPage(this, "https://smg0077.com/google-play-store")
 
 //            val message =
 //                "Download *Kalyan App* " + "https://play.google.com/store/apps/details?id=" + packageName
